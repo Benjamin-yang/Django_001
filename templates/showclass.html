@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <h3>
+                    班级列表
+                </h3>
+                <form class="form-search form-inline">
+                    <input class="input-medium search-query" type="text"/>
+                    <button type="submit" class="btn">查找</button>
+                </form>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>
+                            班级名
+                        </th>
+                        <th>
+                            男生数
+                        </th>
+
+                        <th>
+                            女生名
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for class in classes %}
+                        <tr>
+
+                            <td>
+                                {{ class.g_name }}
+                            </td>
+
+                            <td>
+                                {{ class.g_boy_num }}
+                            </td>
+                            <td>
+                                {{ class.g_girl_num }}
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

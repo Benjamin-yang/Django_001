@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{{ Title }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+    <link rel="stylesheet" href="{% static 'app/base/css/reset.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/swiper.jquery.js' %}"></script>
+
+    {% block extreCSS %}
+
+    {% endblock %}
+
+    {% block extreJS %}
+
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>
